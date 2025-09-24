@@ -9,6 +9,7 @@ body {
   color: #C4F594; /* main text color */
   min-height: 100vh;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 /* ===============================
