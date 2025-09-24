@@ -13,7 +13,7 @@ body {
   padding: 20px;
   font-family: 'Arial', sans-serif;
   background: var(--bg);
-  color: #C4F594; /* main text color */
+  color: var(--text);
   min-height: 100vh;
   box-sizing: border-box;
   text-align: center; /* horizontal centering of text */
@@ -53,7 +53,7 @@ header .logo img:hover {
 header .logo h1 {
   margin: 0;
   font-size: 1.8rem;
-  color: #C4F594;
+  color: var(--text);
 }
 
 header nav {
@@ -64,7 +64,7 @@ header nav {
 }
 
 header nav a {
-  color: #FFFFFF;
+  color: var(--text);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
@@ -72,7 +72,7 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #D8B2FF;
+  color: var(--hover);
 }
 
 @media (max-width: 768px) {
@@ -122,10 +122,10 @@ header nav a:hover {
 }
 
 .card {
-  background: rgba(59, 10, 107, 0.7);
+  background: var(--card-bg);
   padding: 15px 25px;
   border-radius: 12px;
-  color: #C4F594;
+  color: var(--text);
   min-width: 150px;
   text-align: center;     /* centers text inside each card */
   box-shadow: 0 0 12px rgba(0,0,0,0.5);
@@ -134,7 +134,7 @@ header nav a:hover {
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(59,10,107,0.7);
+  box-shadow: var(--hover);
 }
 
 /* =============================== Last.fm Now Playing Section =============================== */
@@ -151,7 +151,7 @@ header nav a:hover {
 }
 
 .now-playing {
-  background: rgba(59,10,107,0.7);
+  background: var(--card-bg);
   padding: 15px;
   border-radius: 12px;
   max-width: 250px;
@@ -164,7 +164,7 @@ header nav a:hover {
 
 .now-playing:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(59,10,107,0.7);
+  box-shadow: var(--hover);
 }
 
 .now-playing img {
@@ -176,7 +176,7 @@ header nav a:hover {
 
 .now-playing h3,
 .now-playing p {
-  color: #C4F594;
+  color: var(--card-bg);
   margin: 2px 0;
 }
 
@@ -186,7 +186,7 @@ header nav a:hover {
   padding: 2rem 1rem;
   border-radius: 12px;
   margin: 50px auto 20px; /* centers the section */
-  color: #C4F594;
+  color: var(--card-bg);
 }
 
 .socials h2 {
@@ -220,11 +220,11 @@ header nav a:hover {
 footer {
   text-align: center;
   margin-top: 50px;
-  color: #C4F594;
+  color: var(--text);
 }
 
 footer a {
-  color: #D8B2FF;
+  color: var(--text);
   text-decoration: none;
 }
 
