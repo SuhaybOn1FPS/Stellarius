@@ -1,9 +1,18 @@
+:root {
+  --bg: hsl(0, 0%, 0%);        /* Pure black background */
+  --card-bg: hsl(0, 0%, 10%);  /* Dark gray card background */
+  --text: hsl(0, 0%, 100%);    /* Pure white text */
+  --hover: hsl(0, 0%, 80%);    /* Light gray hover state */
+  --card-outline: hsl(0, 0%, 30%); /* Mid gray for borders */
+}
+
+
 /* =============================== Body =============================== */
 body {
   margin: 0;
   padding: 20px;
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #3B0A6B, #0B0F3B);
+  background: var(--bg);
   color: #C4F594; /* main text color */
   min-height: 100vh;
   box-sizing: border-box;
