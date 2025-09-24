@@ -49,6 +49,7 @@ header .logo h1 {
 
 header nav {
   display: flex;
+  justify-content: center; /* horizontal centering of links */
   gap: 25px;
   flex-wrap: wrap;
 }
@@ -80,14 +81,57 @@ header nav a:hover {
   header nav {
     flex-direction: column;
     gap: 12px;
-    align-items: center;
+    align-items: center; /* ensures links are centered on mobile */
   }
+}
+
+/* =============================== Hero Section =============================== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers all children horizontally */
+  justify-content: center;
+  gap: 10px;
+  margin: 50px 0;
+  text-align: center;    /* centers text inside hero */
+}
+
+/* =============================== About Section =============================== */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers heading and cards horizontally */
+  text-align: center;    /* centers text inside elements */
+  margin: 50px 0;
+}
+
+.horizontal-container {
+  display: flex;
+  justify-content: center; /* horizontally centers the cards */
+  flex-wrap: wrap;         /* wraps on smaller screens */
+  gap: 20px;
+}
+
+.card {
+  background: rgba(59, 10, 107, 0.7);
+  padding: 15px 25px;
+  border-radius: 12px;
+  color: #C4F594;
+  min-width: 150px;
+  text-align: center;     /* centers text inside each card */
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(59,10,107,0.7);
 }
 
 /* =============================== Last.fm Now Playing Section =============================== */
 .lastfm {
   margin-top: 50px;
-  text-align: center; /* horizontal centering */
+  text-align: center;
 }
 
 .now-playing-container {
@@ -98,10 +142,10 @@ header nav a:hover {
 }
 
 .now-playing {
-  background: #3B0A6B 70%;
+  background: rgba(59,10,107,0.7);
   padding: 15px;
   border-radius: 12px;
-  max-width: 250px; 
+  max-width: 250px;
   width: 100%;
   margin: 0 auto; /* horizontal centering of box */
   box-shadow: 0 0 12px rgba(0,0,0,0.5);
@@ -161,4 +205,20 @@ header nav a:hover {
 
 .social-icons a:hover img {
   transform: scale(1.2);
+}
+
+/* =============================== Footer =============================== */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #C4F594;
+}
+
+footer a {
+  color: #D8B2FF;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
