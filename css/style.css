@@ -1,6 +1,4 @@
-/* ===============================
-   Body
-=============================== */
+/* =============================== Body =============================== */
 body {
   margin: 0;
   padding: 20px;
@@ -9,30 +7,138 @@ body {
   color: #C4F594; /* main text color */
   min-height: 100vh;
   box-sizing: border-box;
+  text-align: center; /* horizontal centering of text */
+}
+
+/* =============================== Header =============================== */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  padding: 20px 0;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  max-height: 150px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+  transform: scale(1.05);
+}
+
+header .logo h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #C4F594;
+}
+
+header nav {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #D8B2FF;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  header .logo img {
+    max-height: 120px;
+  }
+  header .logo h1 {
+    font-size: 2rem;
+  }
+  header nav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+}
+
+/* =============================== Last.fm Now Playing Section =============================== */
+.lastfm {
+  margin-top: 50px;
   text-align: center; /* horizontal centering */
 }
 
-/* ===============================
-   Now Playing Section
-=============================== */
 .now-playing-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* horizontal centering */
+  align-items: center; /* horizontal centering of boxes */
   gap: 15px;
 }
 
 .now-playing {
-  margin: 0 auto; /* horizontal centering for the box */
-  text-align: center; /* text inside the box centered */
+  background: #3B0A6B 70%;
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 250px; 
+  width: 100%;
+  margin: 0 auto; /* horizontal centering of box */
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* text inside box centered */
 }
 
-/* ===============================
-   Socials Section
-=============================== */
+.now-playing:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(59,10,107,0.7);
+}
+
+.now-playing img {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.now-playing h3,
+.now-playing p {
+  color: #C4F594;
+  margin: 2px 0;
+}
+
+/* =============================== Socials Section =============================== */
 .socials {
-  margin: 50px auto 20px; /* horizontal centering */
-  text-align: center; /* text inside socials centered */
+  text-align: center; /* horizontal centering */
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin: 50px auto 20px; /* centers the section */
+  color: #C4F594;
+}
+
+.socials h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .social-icons {
@@ -40,4 +146,19 @@ body {
   justify-content: center; /* horizontal centering of icons */
   gap: 1.5rem;
   flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
 }
