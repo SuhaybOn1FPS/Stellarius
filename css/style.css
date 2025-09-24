@@ -1,11 +1,10 @@
 :root {
-  --bg: hsl(0, 0%, 0%);        /* Pure black background */
-  --card-bg: hsl(0, 0%, 10%);  /* Dark gray card background */
-  --text: hsl(0, 0%, 100%);    /* Pure white text */
-  --hover: hsl(0, 0%, 80%);    /* Light gray hover state */
+  --bg: hsl(0, 0%, 0%);          /* Pure black background */
+  --card-bg: hsl(0, 0%, 10%);    /* Dark gray card background */
+  --text: hsl(0, 0%, 100%);      /* Pure white text */
+  --hover: hsl(0, 0%, 80%);      /* Light gray hover state */
   --card-outline: hsl(0, 0%, 30%); /* Mid gray for borders */
 }
-
 
 /* =============================== Body =============================== */
 body {
@@ -16,7 +15,7 @@ body {
   color: var(--text);
   min-height: 100vh;
   box-sizing: border-box;
-  text-align: center; /* horizontal centering of text */
+  text-align: center;
 }
 
 /* =============================== Header =============================== */
@@ -58,7 +57,7 @@ header .logo h1 {
 
 header nav {
   display: flex;
-  justify-content: center; /* horizontal centering of links */
+  justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
 }
@@ -90,7 +89,7 @@ header nav a:hover {
   header nav {
     flex-direction: column;
     gap: 12px;
-    align-items: center; /* ensures links are centered on mobile */
+    align-items: center;
   }
 }
 
@@ -98,43 +97,44 @@ header nav a:hover {
 .hero {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* centers all children horizontally */
+  align-items: center;
   justify-content: center;
   gap: 10px;
   margin: 50px 0;
-  text-align: center;    /* centers text inside hero */
+  text-align: center;
 }
 
 /* =============================== About Section =============================== */
 .about {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* centers heading and cards horizontally */
-  text-align: center;    /* centers text inside elements */
+  align-items: center;
+  text-align: center;
   margin: 50px 0;
 }
 
 .horizontal-container {
   display: flex;
-  justify-content: center; /* horizontally centers the cards */
-  flex-wrap: wrap;         /* wraps on smaller screens */
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .card {
   background: var(--card-bg);
+  border: 1px solid var(--card-outline);
   padding: 15px 25px;
   border-radius: 12px;
   color: var(--text);
   min-width: 150px;
-  text-align: center;     /* centers text inside each card */
+  text-align: center;
   box-shadow: 0 0 12px rgba(0,0,0,0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: var(--hover);
+  box-shadow: 0 0 12px var(--hover);
 }
 
 /* =============================== Last.fm Now Playing Section =============================== */
@@ -146,25 +146,26 @@ header nav a:hover {
 .now-playing-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* horizontal centering of boxes */
+  align-items: center;
   gap: 15px;
 }
 
 .now-playing {
   background: var(--card-bg);
+  border: 1px solid var(--card-outline);
   padding: 15px;
   border-radius: 12px;
   max-width: 250px;
   width: 100%;
-  margin: 0 auto; /* horizontal centering of box */
+  margin: 0 auto;
   box-shadow: 0 0 12px rgba(0,0,0,0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center; /* text inside box centered */
+  text-align: center;
 }
 
 .now-playing:hover {
   transform: scale(1.02);
-  box-shadow: var(--hover);
+  box-shadow: 0 0 12px var(--hover);
 }
 
 .now-playing img {
@@ -176,17 +177,17 @@ header nav a:hover {
 
 .now-playing h3,
 .now-playing p {
-  color: var(--card-bg);
+  color: var(--text);
   margin: 2px 0;
 }
 
 /* =============================== Socials Section =============================== */
 .socials {
-  text-align: center; /* horizontal centering */
+  text-align: center;
   padding: 2rem 1rem;
   border-radius: 12px;
-  margin: 50px auto 20px; /* centers the section */
-  color: var(--card-bg);
+  margin: 50px auto 20px;
+  color: var(--text);
 }
 
 .socials h2 {
@@ -196,7 +197,7 @@ header nav a:hover {
 
 .social-icons {
   display: flex;
-  justify-content: center; /* horizontal centering of icons */
+  justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
