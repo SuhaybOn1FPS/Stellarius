@@ -1,9 +1,9 @@
 :root {
-  --bg: hsl(0, 0%, 0%);          /* Pure black background */
-  --card-bg: hsl(0, 0%, 10%);    /* Dark gray card background */
-  --text: hsl(0, 0%, 100%);      /* Pure white text */
-  --hover: hsl(0, 0%, 80%);      /* Light gray hover state */
-  --card-outline: hsl(0, 0%, 30%); /* Mid gray for borders */
+  --bg: hsl(0, 0%, 0%);
+  --card-bg: hsl(0, 0%, 10%);
+  --text: hsl(0, 0%, 100%);
+  --hover: hsl(0, 0%, 80%);
+  --card-outline: hsl(0, 0%, 30%);
 }
 
 /* =============================== Body =============================== */
@@ -12,8 +12,7 @@ body {
   padding: 20px;
   font-family: 'Arial', sans-serif;
 
-  /* === SVG Background === */
-  background: url('../Images/background.svg') no-repeat center center fixed, var(--bg);
+  background: url('Images/background.svg') no-repeat center center fixed, var(--bg);
   background-size: cover;
 
   color: var(--text);
@@ -45,7 +44,6 @@ header .logo {
 header .logo img {
   max-height: 150px;
   width: auto;
-  display: block;
   transition: transform 0.3s ease;
 }
 
@@ -53,15 +51,8 @@ header .logo img:hover {
   transform: scale(1.05);
 }
 
-header .logo h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: var(--text);
-}
-
 header nav {
   display: flex;
-  justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
 }
@@ -87,14 +78,6 @@ header nav a:hover {
   header .logo img {
     max-height: 120px;
   }
-  header .logo h1 {
-    font-size: 2rem;
-  }
-  header nav {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-  }
 }
 
 /* =============================== Hero Section =============================== */
@@ -102,7 +85,6 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   margin: 50px 0;
   text-align: center;
@@ -113,7 +95,6 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   margin: 50px 0;
 }
 
@@ -129,7 +110,6 @@ header nav a:hover {
   border: 1px solid var(--card-outline);
   padding: 15px 25px;
   border-radius: 12px;
-  color: var(--text);
   min-width: 150px;
   text-align: center;
   box-shadow: 0 0 12px rgba(0,0,0,0.5);
@@ -141,17 +121,9 @@ header nav a:hover {
   box-shadow: 0 0 12px var(--hover);
 }
 
-/* =============================== Last.fm Now Playing Section =============================== */
+/* =============================== Last.fm Section =============================== */
 .lastfm {
   margin-top: 50px;
-  text-align: center;
-}
-
-.now-playing-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
 }
 
 .now-playing {
@@ -163,8 +135,8 @@ header nav a:hover {
   width: 100%;
   margin: 0 auto;
   box-shadow: 0 0 12px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .now-playing:hover {
@@ -179,24 +151,11 @@ header nav a:hover {
   margin-bottom: 10px;
 }
 
-.now-playing h3,
-.now-playing p {
-  color: var(--text);
-  margin: 2px 0;
-}
-
 /* =============================== Socials Section =============================== */
 .socials {
   text-align: center;
   padding: 2rem 1rem;
-  border-radius: 12px;
   margin: 50px auto 20px;
-  color: var(--text);
-}
-
-.socials h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
 }
 
 .social-icons {
@@ -206,12 +165,7 @@ header nav a:hover {
   flex-wrap: wrap;
 }
 
-.social-icons a {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.social-icons a img {
+.social-icons img {
   width: 40px;
   height: 40px;
   transition: transform 0.3s ease;
@@ -225,14 +179,4 @@ header nav a:hover {
 footer {
   text-align: center;
   margin-top: 50px;
-  color: var(--text);
-}
-
-footer a {
-  color: var(--text);
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
