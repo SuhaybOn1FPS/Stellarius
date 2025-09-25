@@ -1,19 +1,26 @@
 :root {
-  --bg: hsl(0, 0%, 100%);
+  --bg: hsl(0, 0%, 12%);          /* Slightly lighter than black */
   --card-bg: hsl(0, 0%, 10%);
   --text: hsl(0, 0%, 100%);
   --hover: hsl(0, 0%, 80%);
   --card-outline: hsl(0, 0%, 30%);
 }
 
-/* =============================== Body =============================== */
 body {
   margin: 0;
   padding: 20px;
   font-family: 'Arial', sans-serif;
 
-  background: url('Images/background.svg') no-repeat center center fixed, var(--bg);
+  /* Background setup */
+  background-color: var(--bg);  /* base color */
+  background-image: url('Images/background.svg'); /* SVG overlay */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   background-size: cover;
+
+  /* Optional: make SVG more visible with blend */
+  background-blend-mode: lighten;
 
   color: var(--text);
   min-height: 100vh;
