@@ -13,7 +13,7 @@ body {
   font-family: 'Arial', sans-serif;
 
   /* === SVG Background === */
-  background: url('Images/background.svg') no-repeat center center fixed, var(--bg);
+  background: url(/Images/background.svg) no-repeat center center fixed, var(--bg);
   background-size: cover;
 
   color: var(--text);
