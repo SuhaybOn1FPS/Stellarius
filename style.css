@@ -12,15 +12,14 @@ body {
   font-family: 'Arial', sans-serif;
 
   /* Background setup */
-  background-color: var(--bg);  /* base color */
-  background-image: url('Images/background.svg'); /* SVG overlay */
+  background-color: var(--bg); /* Fallback color */
+  background-image: url('images/background.svg'); /* Adjust the path as necessary */
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  background-size: cover;
 
-  /* Optional: make SVG more visible with blend */
-  background-blend-mode: lighten;
+  /* Scaling the SVG */
+  background-size: cover; /* Ensures the background covers the entire viewport */
 
   color: var(--text);
   min-height: 100vh;
