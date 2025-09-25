@@ -11,7 +11,11 @@ body {
   margin: 0;
   padding: 20px;
   font-family: 'Arial', sans-serif;
-  background: var(--bg);
+
+  /* === SVG Background === */
+  background: url('background.svg') no-repeat center center fixed, var(--bg);
+  background-size: cover;
+
   color: var(--text);
   min-height: 100vh;
   box-sizing: border-box;
