@@ -30,7 +30,7 @@ header {
 }
 
 header .logo img {
-  max-height: 120px;
+  max-height: 180px;
   transition: transform 0.3s ease;
 }
 
@@ -260,3 +260,4 @@ header .logo img:hover {
   color: #1a1a1a;
   text-align: center;
 }
+
