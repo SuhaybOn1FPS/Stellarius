@@ -16,47 +16,18 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--text);
   min-height: 100vh;
-  background-image: url('Images/background.png'); /* fallback image */
+  background-image: url('Images/background.png');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   padding: 20px;
-  position: relative;
-  z-index: 0;
-}
-
-/* Background Video */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-  pointer-events: none; /* ensures clicks go through */
-}
-
-/* Video overlay for readability */
-#video-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: -1;
-  pointer-events: none;
 }
 
 /* Header */
 header {
   display: flex;
-  flex-direction: column; /* stack logo and nav */
+  flex-direction: column;
   align-items: center;
   gap: 10px;
-  position: relative;
-  z-index: 1;
 }
 
 header .logo img {
@@ -68,7 +39,13 @@ header .logo img:hover {
   transform: scale(1.05);
 }
 
-/* Horizontal container for cards */
+/* Hero */
+.hero {
+  text-align: center;
+  margin: 50px 0;
+}
+
+/* Horizontal card container */
 .horizontal-container {
   display: flex;
   flex-wrap: wrap;
@@ -78,8 +55,6 @@ header .logo img:hover {
   padding: 20px 0;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 /* Card styling */
@@ -97,8 +72,6 @@ header .logo img:hover {
   box-shadow: 0 6px 14px rgba(0,0,0,0.35);
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  z-index: 1;
 }
 
 .card:hover {
@@ -106,7 +79,6 @@ header .logo img:hover {
   box-shadow: 0 10px 20px rgba(0,0,0,0.45);
 }
 
-/* Card heading */
 .card h3 {
   display: flex;
   align-items: center;
@@ -128,7 +100,6 @@ header .logo img:hover {
   display: inline-block;
 }
 
-/* Remaining content styling */
 .card > :not(h3):not(#lastfm-nowplaying) {
   text-align: left;
   align-self: stretch;
@@ -145,7 +116,11 @@ header .logo img:hover {
   line-height: 1.4;
 }
 
-/* Profile card avatar */
+/* Profile Card */
+.profile-card {
+  text-align: left;
+}
+
 .profile-card .avatar {
   width: 100px;
   height: 100px;
@@ -154,7 +129,7 @@ header .logo img:hover {
   margin-bottom: 15px;
 }
 
-/* Social icons */
+/* Social Icons */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -182,8 +157,13 @@ header .logo img:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 10px;
+}
+
+.card .learning-icons,
+.card .tool-icons {
+  justify-content: flex-start;
 }
 
 .learning-item,
@@ -226,12 +206,26 @@ header .logo img:hover {
   align-items: center;
   gap: 10px;
   text-align: center;
-  z-index: 1;
 }
 
 #lastfm-nowplaying img {
   width: 100px;
   height: 100px;
+  border-radius: 10px;
+  border: 2px solid var(--card-outline);
+}
+
+#lastfm-nowplaying .now-playing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+#lastfm-nowplaying .now-playing img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
   border-radius: 10px;
   border: 2px solid var(--card-outline);
 }
@@ -251,6 +245,5 @@ header .logo img:hover {
 .techstacksectiontitle {
   color: #1a1a1a;
   text-align: center;
-  position: relative;
-  z-index: 1;
 }
+
