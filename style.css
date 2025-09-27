@@ -16,7 +16,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--text);
   min-height: 100vh;
-  background-image: url('Images/background.png');
+  background-image: url('Images/background1.png');
   background-size: cover;
   background-position: center;
   padding: 20px;
@@ -246,4 +246,5 @@ header .logo img:hover {
   color: #1a1a1a;
   text-align: center;
 }
+
 
