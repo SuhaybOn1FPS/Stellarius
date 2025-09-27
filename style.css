@@ -12,10 +12,8 @@
   box-sizing: border-box;
 }
 
-/* Body font: Inter 400 */
 body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
   color: var(--text);
   min-height: 100vh;
   background-image: url('Images/background.png');
@@ -26,7 +24,7 @@ body {
 /* Header */
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* stack logo and nav */
   align-items: center;
   gap: 10px;
 }
@@ -40,28 +38,25 @@ header .logo img:hover {
   transform: scale(1.05);
 }
 
-/* Section titles use M PLUS Rounded */
-h2.techstacksectiontitle {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-weight: 500;
-  color: #1a1a1a;
+/* Hero */
+.hero {
   text-align: center;
-  margin: 30px 0 10px;
+  margin: 50px 0;
 }
 
-/* Horizontal container */
+/* Horizontal card container for top and tech stack */
 .horizontal-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  align-items: stretch;
+  align-items: stretch; /* equal height cards */
   padding: 20px 0;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px; /* match top section width */
+  margin: 0 auto; /* center horizontally */
 }
 
-/* Cards */
+/* Card styling */
 .card {
   background: var(--card-bg);
   border: 1px solid var(--card-outline);
@@ -69,7 +64,7 @@ h2.techstacksectiontitle {
   padding: 20px;
   min-width: 220px;
   max-width: 300px;
-  flex: 1;
+  flex: 1; /* stretch evenly */
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -83,48 +78,58 @@ h2.techstacksectiontitle {
   box-shadow: 0 10px 20px rgba(0,0,0,0.45);
 }
 
-/* Headings in cards use M PLUS Rounded */
 .card h3 {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;       /* vertically align icon + text */
+  justify-content: center;  /* center the heading inside the card by default */
   gap: 0.5rem;
   font-size: 1.2rem;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-weight: 500;
   color: #1a1a1a;
   margin-bottom: 10px;
 }
 
-/* Profile card heading left-aligned */
+/* Keep the profile card heading (Stellarius) left-aligned */
 .profile-card h3 {
   justify-content: flex-start;
 }
 
+/* Make the icon sit directly to the left of the heading text and
+   ensure the icon+text pair is treated as a single centered unit. */
 .card h3 .card-icon {
-  width: 20px;
+  width: 20px; /* slightly smaller so visual centering feels balanced */
   height: 20px;
-  flex: 0 0 20px;
+  flex: 0 0 20px; /* fixed size so centering accounts for icon width */
   display: inline-block;
 }
 
-/* Card content alignment */
+/* Make all card content left-aligned except the card heading (h3)
+   and except the Last.fm container which handles its own centering. */
 .card > :not(h3):not(#lastfm-nowplaying) {
   text-align: left;
-  align-self: stretch;
+  align-self: stretch; /* ensure block children span card width for left alignment */
 }
 
-/* Icons */
-.card-icon, .learning-item img, .tool img, .spec-icon {
+
+
+.card-icon {
+  width: 24px;
+  height: 24px;
   object-fit: contain;
 }
 
-.card p, .learning-item span, .tool span, .pc-specs p {
+.card p {
   font-size: 0.95rem;
   line-height: 1.4;
 }
 
-/* Profile card avatar */
+/* Profile Card */
+.profile-card {
+  /* make profile card content left-aligned to match other cards
+     (headings remain left via .card h3). Avatar and icons will
+     sit to the left unless specifically overridden) */
+  text-align: left;
+}
+
 .profile-card .avatar {
   width: 100px;
   height: 100px;
@@ -133,12 +138,19 @@ h2.techstacksectiontitle {
   margin-bottom: 15px;
 }
 
-/* Social icons */
+/* Social Icons */
 .social-icons {
   display: flex;
+  justify-content: center;
   gap: 1rem;
-  justify-content: flex-start;
   margin-top: 10px;
+}
+
+/* Left-align social icons when inside a card (except Last.fm card)
+   The more specific selector below overrides the generic .social-icons
+   centering used elsewhere. */
+.card .social-icons {
+  justify-content: flex-start;
 }
 
 .social-icons img {
@@ -152,29 +164,56 @@ h2.techstacksectiontitle {
 }
 
 /* Learning / Tool Icons */
-.learning-icons, .tool-icons {
+.learning-icons,
+.tool-icons {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 10px;
 }
 
-.learning-item, .tool {
+/* Left-align icon groups inside cards (but keep global center where used
+   outside of cards). */
+.card .learning-icons,
+.card .tool-icons {
+  justify-content: flex-start;
+}
+
+.learning-item,
+.tool {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.learning-item img,
+.tool img {
+  width: 1em;
+  height: 1em;
+}
+
+.learning-item span,
+.tool span {
+  font-size: 0.95rem;
 }
 
 /* PC Specs */
 .pc-specs p {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: 6px;
 }
 
-/* Last.fm now playing */
+.spec-icon {
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+}
+
+/* Last.fm Now Playing */
 #lastfm-nowplaying {
   display: flex;
   flex-direction: column;
@@ -188,4 +227,36 @@ h2.techstacksectiontitle {
   height: 100px;
   border-radius: 10px;
   border: 2px solid var(--card-outline);
+}
+
+#lastfm-nowplaying .now-playing {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center children horizontally */
+  gap: 6px;
+}
+
+#lastfm-nowplaying .now-playing img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--card-outline);
+}
+
+#lastfm-nowplaying .track {
+  font-weight: 700;
+  text-align: center; /* center the track title */
+  margin: 0; /* remove default h3 margin */
+}
+
+#lastfm-nowplaying .artist {
+  color: var(--text);
+  text-align: center; /* center the artist line */
+  margin: 0; /* remove default p margin */
+}
+
+.techstacksectiontitle {
+  color: #1a1a1a;
+  text-align: center;
 }
